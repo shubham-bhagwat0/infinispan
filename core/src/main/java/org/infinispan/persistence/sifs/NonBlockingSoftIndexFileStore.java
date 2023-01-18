@@ -202,6 +202,7 @@ public class NonBlockingSoftIndexFileStore<K, V> implements NonBlockingStore<K, 
          index = new Index(ctx.getNonBlockingManager(), fileProvider, getIndexLocation(), configuration.indexSegments(),
                cacheSegments, configuration.minNodeSize(), configuration.maxNodeSize(), temporaryTable, compactor,
                timeService);
+         System.out.print("zxc index values => min node : " + configuration.minNodeSize() + " maxNodeSize " + configuration.maxNodeSize() );
       } catch (IOException e) {
          throw log.cannotOpenIndex(configuration.indexLocation(), e);
       }
