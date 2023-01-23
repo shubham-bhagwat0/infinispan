@@ -47,6 +47,7 @@ public class TableManipulation implements AutoCloseable {
       PooledConnectionFactoryConfiguration pooledConnectionFactoryConfiguration = persistenceConfiguration.create();
       connectionFactory = ConnectionFactory.getConnectionFactory(PooledConnectionFactory.class);
       connectionFactory.start(pooledConnectionFactoryConfiguration, connectionFactory.getClass().getClassLoader());
+      System.out.println("zxc connfactory - server/persistence : " + getConnectionFactory();
       return connectionFactory;
    }
 
